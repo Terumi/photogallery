@@ -1,0 +1,23 @@
+{
+    "name": "ffy/photogallery",
+    "description": "",
+    "authors": [
+        {
+            "name": "Tasos Protopapas",
+            "email": "tasos@ffyeah.gr"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.1.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Ffy\\Photogallery\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
