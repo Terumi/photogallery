@@ -13,11 +13,16 @@
     },
     "autoload": {
         "classmap": [
-            "src/migrations"
+            "src/migrations",
+            "src/controllers"
         ],
         "psr-0": {
             "Ffy\\Photogallery\\": "src/"
-        }
+        },
+        "files": [
+            /*"src/controllers/BaseController.php",
+            "src/controllers/PhotosController.php"*/
+        ]
     },
     "minimum-stability": "stable"
 }

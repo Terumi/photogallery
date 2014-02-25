@@ -19,6 +19,7 @@ class PhotogalleryServiceProvider extends ServiceProvider {
 	public function boot()
 	{
 		$this->package('ffy/photogallery');
+        include __DIR__.'/../../routes.php';
 	}
 
 	/**
