@@ -1,3 +1,4 @@
 photogallery
 ============
-this is a laravel gallery package using bootstrap3
+this is a Laravel gallery package using bootstrap3
+
