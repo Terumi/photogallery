@@ -1,3 +1,4 @@
 photogallery
 ============
-this is a laravel gallery package
+this is a laravel gallery package 
+dike mou!
