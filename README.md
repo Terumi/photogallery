@@ -1,10 +1,11 @@
 Photogallery
 ============
-This is a Laravel 4.1 gallery package using bootstrap3 and
+This is a Laravel 4.1 gallery package using bootstrap3 and [Intervention Image] (http://intervention.olivervogel.net/) by Oliver Vogel
 
 Installation
 ------------
 1. add this to the providers array on your config/app.php:
+
 ``'Ffy\Photogallery\PhotogalleryServiceProvider'``
 
 2. add the intervention package to the providers array on your config/app.php:
@@ -15,6 +16,11 @@ Installation
 
 4. migrate the package tables with:
 ``php artisan migrate --package="vendor/package"``
+
+
+
+
+
 
 
 Todos:
