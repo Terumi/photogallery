@@ -23,10 +23,11 @@ Todos:
 - add bootstrap3 /cdn
   * set the markup in forms
 - upload files
-- ~~implement intervension~~
+- ~~implement intervention~~
 - ~~add a config file~~
   * ~~add prefix~~
   * ~~add upload folder~~
+  * create sprites
   * add multiple versions of the image
   * add resize functionality
   * add crop functionality
