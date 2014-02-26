@@ -13,7 +13,7 @@ yey!
 
         <li>
             {{ Form::label('url', 'Url:') }}
-            {{ Form::text('url') }}
+            {{ Form::file('url', array('Files'=> true)) }}
         </li>
 
         <li>
