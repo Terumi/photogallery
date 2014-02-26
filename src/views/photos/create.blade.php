@@ -4,7 +4,7 @@
 
 <h1>Create Photo</h1>
 yey!
-{{ Form::open(array('action' => 'Ffy\Photogallery\PhotosController@store')) }}
+{{ Form::open(array('action' => 'Ffy\Photogallery\PhotosController@store', 'files'=> true)) }}
 	<ul>
         <li>
             {{ Form::label('name', 'Name:') }}
@@ -13,7 +13,7 @@ yey!
 
         <li>
             {{ Form::label('url', 'Url:') }}
-            {{ Form::file('url', array('Files'=> true)) }}
+            {{ Form::file('url') }}
         </li>
 
         <li>

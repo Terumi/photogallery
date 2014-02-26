@@ -7,16 +7,29 @@ installation
 1. add this to the providers array on your config/app.php:
 ``'Ffy\Photogallery\PhotogalleryServiceProvider'``
 
-2. migrate the package tables with:
+2. add the intervention package to the providers array on your config/app.php:
+``'Intervention\Image\ImageServiceProvider'``
+
+3. add the intervention facade to the aliases array on your config/app.php:
+``'Image' => 'Intervention\Image\Facades\Image',``
+
+4. migrate the package tables with:
 ``php artisan migrate --package="vendor/package"``
+
 
 todos:
 -------
+- add albums
+- add a 'favorite' flag to the images
 - add bootstrap3 /cdn
   * set the markup in forms
 - upload files
-- implement intervension
+- ~~implement intervension~~
 - ~~add a config file~~
   * ~~add prefix~~
-  * add upload folder
+  * ~~add upload folder~~
+  * add multiple versions of the image
+  * add resize functionality
+  * add crop functionality
+  * add grayscale functionality
 - ~~prefix tables~~

@@ -1,10 +1,13 @@
 <?php namespace Ffy\Photogallery;
 
 
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\View;
+use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\Config;
 
 
 class PhotosController extends BaseController {
@@ -55,8 +58,26 @@ class PhotosController extends BaseController {
 
 		if ($validation->passes())
 		{
-			$this->photo->create($input);
+            //get the file from the input
+            $file = Input::file('url');
+            //come up with a unique name to avoid name conflicts
+            $file_name = time(). '-'. strtolower($file->getClientOriginalName());
+            //make an intevention/image out of the uploaded image
+            $image = Image::make($file->getRealPath());
+            //get the config folder
+            $path = Config::get('photogallery::upload_folder');
+            //if it doesn't exist, create it
+            File::exists($path) or File::makeDirectory($path);
+            //save the f@#$ image
+            $image->save($path.$file_name);
 
+            //$image->crop(140, 140)->grayscale()->save($path."bw_".$file_name);
+
+            // rename the filename from the input so you can save the image record with the proper name
+            $input['url'] = $file_name;
+            // save the record
+            $this->photo->create($input);
+            //go back
 			return Redirect::action('Ffy\Photogallery\PhotosController@index');
 		}
 
