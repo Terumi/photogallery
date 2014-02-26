@@ -3,7 +3,7 @@
 @section('main')
 
 <h1>Edit Photo</h1>
-{{ Form::model($photo, array('method' => 'PATCH', 'route' => array('photos.update', $photo->id))) }}
+{{ Form::model($photo, array('method' => 'PATCH', 'action' => array('Ffy\Photogallery\PhotosController@update', $photo->id))) }}
 	<ul>
         <li>
             {{ Form::label('name', 'Name:') }}
@@ -22,7 +22,7 @@
 
 		<li>
 			{{ Form::submit('Update', array('class' => 'btn btn-info')) }}
-			{{ link_to_route('photos.show', 'Cancel', $photo->id, array('class' => 'btn')) }}
+			{{ link_to_action('Ffy\Photogallery\PhotosController@show', 'Cancel', $photo->id, array('class' => 'btn')) }}
 		</li>
 	</ul>
 {{ Form::close() }}

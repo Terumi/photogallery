@@ -4,7 +4,7 @@
 
 <h1>Create Photo</h1>
 yey!
-{{ Form::open(array('route' => 'photos.store')) }}
+{{ Form::open(array('action' => 'Ffy\Photogallery\PhotosController@store')) }}
 	<ul>
         <li>
             {{ Form::label('name', 'Name:') }}

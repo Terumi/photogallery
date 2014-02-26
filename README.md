@@ -16,5 +16,7 @@ todos:
   * set the markup in forms
 - upload files
 - implement intervension
-- add a config file
+- ~~add a config file~~
+  * ~~add prefix~~
+  * add upload folder
 - ~~prefix tables~~

@@ -1,5 +1,6 @@
 <?php namespace Ffy\Photogallery;
 
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -20,11 +21,8 @@ class PhotogalleryServiceProvider extends ServiceProvider {
 	public function boot()
 	{
 		$this->package('ffy/photogallery');
-
-        //View::addNamespace('photogallery', app_path().'/views/photos');
         View::addNamespace('photogallery', __DIR__.'/../../views');
-        //Config::get('package::database.connections')
-
+        Config::addNamespace('photogallery', __DIR__.'/../../config');
 
         include __DIR__.'/../../routes.php';
 	}

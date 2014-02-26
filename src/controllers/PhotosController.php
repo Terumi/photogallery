@@ -57,7 +57,7 @@ class PhotosController extends BaseController {
 		{
 			$this->photo->create($input);
 
-			return Redirect::route('photos.index');
+			return Redirect::action('Ffy\Photogallery\PhotosController@index');
 		}
 
 		return Redirect::route('photos.create')
@@ -74,8 +74,7 @@ class PhotosController extends BaseController {
 	 */
 	public function show($id)
 	{
-		$photo = $this->photo->findOrFail($id);
-
+        $photo = $this->photo->findOrFail($id);
 		return View::make('photogallery::photos.show', compact('photo'));
 	}
 
@@ -91,7 +90,7 @@ class PhotosController extends BaseController {
 
 		if (is_null($photo))
 		{
-			return Redirect::route('photos.index');
+			return Redirect::action('Ffy\Photogallery\PhotosController@index');
 		}
 
 		return View::make('photogallery::photos.edit', compact('photo'));
@@ -105,18 +104,20 @@ class PhotosController extends BaseController {
 	 */
 	public function update($id)
 	{
-		$input = array_except(Input::all(), '_method');
+        $input = array_except(Input::all(), '_method');
 		$validation = Validator::make($input, Photo::$rules);
 
 		if ($validation->passes())
 		{
-			$photo = $this->photo->find($id);
-			$photo->update($input);
+            $photo = $this->photo->find($id);
 
-			return Redirect::route('photos.show', $id);
-		}
+            $photo->update($input);
 
-		return Redirect::route('photos.edit', $id)
+            return Redirect::action('Ffy\Photogallery\PhotosController@show', array('id' => $id));
+        }
+
+
+		return Redirect::action('Ffy\Photogallery\PhotosController@edit', array('id' => $id))
 			->withInput()
 			->withErrors($validation)
 			->with('message', 'There were validation errors.');
@@ -132,7 +133,7 @@ class PhotosController extends BaseController {
 	{
 		$this->photo->find($id)->delete();
 
-		return Redirect::route('photos.index');
+		return Redirect::action('Ffy\Photogallery\PhotosController@index');
 	}
 
 }
