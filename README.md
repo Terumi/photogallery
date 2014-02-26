@@ -1,8 +1,8 @@
 Photogallery
 ============
-This is a Laravel 4.1 gallery package using bootstrap3
+This is a Laravel 4.1 gallery package using bootstrap3 and
 
-installation
+Installation
 ------------
 1. add this to the providers array on your config/app.php:
 ``'Ffy\Photogallery\PhotogalleryServiceProvider'``
@@ -17,7 +17,7 @@ installation
 ``php artisan migrate --package="vendor/package"``
 
 
-todos:
+Todos:
 -------
 - add albums
 - add a 'favorite' flag to the images

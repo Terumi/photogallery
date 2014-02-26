@@ -4,9 +4,12 @@
     "authors": [
         {
             "name": "Tasos Protopapas",
-            "email": "tasos@ffyeah.gr"
+            "email": "tasos@ffyeah.gr",
+            "homepage": "http://www.ffyeah.gr",
+            "role": "Developer"
         }
     ],
+    "license": "MIT",
     "require": {
         "php": ">=5.3.0",
         "illuminate/support": "4.1.*",
