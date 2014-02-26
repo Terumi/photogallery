@@ -22,7 +22,8 @@ Todos:
 - add a 'favorite' flag to the images
 - add bootstrap3 /cdn
   * set the markup in forms
-- upload files
+- ~~upload files on upload~~
+- ~~delete files on delete!!
 - ~~implement intervention~~
 - ~~add a config file~~
   * ~~add prefix~~

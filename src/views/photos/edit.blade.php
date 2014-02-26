@@ -3,7 +3,7 @@
 @section('main')
 
 <h1>Edit Photo</h1>
-{{ Form::model($photo, array('method' => 'PATCH', 'action' => array('Ffy\Photogallery\PhotosController@update', $photo->id))) }}
+{{ Form::model($photo, array('method' => 'PATCH', 'action' => array('Ffy\Photogallery\PhotosController@update', $photo->id), 'files'=>true)) }}
 	<ul>
         <li>
             {{ Form::label('name', 'Name:') }}
@@ -12,7 +12,7 @@
 
         <li>
             {{ Form::label('url', 'Url:') }}
-            {{ Form::text('url') }}
+            {{ Form::file('url') }}
         </li>
 
         <li>
