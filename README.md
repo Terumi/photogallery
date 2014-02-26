@@ -16,12 +16,6 @@ Installation
 4. migrate the package tables with:
 ``php artisan migrate --package="vendor/package"``
 
-
-
-
-
-
-
 Todos:
 -------
 - add albums
