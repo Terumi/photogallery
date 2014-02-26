@@ -1,6 +1,6 @@
 Photogallery
 ============
-this is a Laravel gallery package using bootstrap3
+This is a Laravel 4.1 gallery package using bootstrap3
 
 
 todos:
@@ -9,4 +9,4 @@ todos:
 - upload files
 - implement intervension
 - add a config file
-- prefix tables
+- ~~prefix tables~~
