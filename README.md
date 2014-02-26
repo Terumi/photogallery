@@ -5,7 +5,6 @@ This is a Laravel 4.1 gallery package using bootstrap3 and [Intervention Image] 
 Installation
 ------------
 1. add this to the providers array on your config/app.php:
-
 ``'Ffy\Photogallery\PhotogalleryServiceProvider'``
 
 2. add the intervention package to the providers array on your config/app.php:
