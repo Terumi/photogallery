@@ -14,15 +14,12 @@
     "autoload": {
         "classmap": [
             "src/migrations",
-            "src/controllers"
+            "src/controllers",
+            "src/models"
         ],
         "psr-0": {
             "Ffy\\Photogallery\\": "src/"
-        },
-        "files": [
-            /*"src/controllers/BaseController.php",
-            "src/controllers/PhotosController.php"*/
-        ]
+        }
     },
     "minimum-stability": "stable"
 }

@@ -19,6 +19,11 @@ class PhotogalleryServiceProvider extends ServiceProvider {
 	public function boot()
 	{
 		$this->package('ffy/photogallery');
+
+        // Views will first be sought in app/views/gallery before the package view is used.
+        \View::addNamespace('photogallery', app_path().'/views/photos');
+        \View::addNamespace('photogallery', __DIR__.'/../../views');
+
         include __DIR__.'/../../routes.php';
 	}
 

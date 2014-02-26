@@ -3,7 +3,7 @@
 @section('main')
 
 <h1>Create Photo</h1>
-
+yey!
 {{ Form::open(array('route' => 'photos.store')) }}
 	<ul>
         <li>

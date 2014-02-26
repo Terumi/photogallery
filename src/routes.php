@@ -1,4 +1,4 @@
 <?php
 
-Route::controller('photogallery', 'Ffy\Photogallery\Controllers\PhotosController');
-//Route::resource('photos', 'PhotosController');
+//Route::controller('photogallery', 'Ffy\Photogallery\PhotosController');
+Route::resource('photos', 'Ffy\Photogallery\PhotosController');

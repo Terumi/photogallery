@@ -1,4 +1,10 @@
-<?php namespace Ffy\Photogallery\Controllers;
+<?php namespace Ffy\Photogallery;
+
+
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\View;
 
 
 class PhotosController extends BaseController {
@@ -24,7 +30,7 @@ class PhotosController extends BaseController {
 	{
 		$photos = $this->photo->all();
 
-		return View::make('photos.index', compact('photos'));
+		return View::make('photogallery::photos.index', compact('photos'));
 	}
 
 	/**
@@ -34,7 +40,7 @@ class PhotosController extends BaseController {
 	 */
 	public function create()
 	{
-		return View::make('photos.create');
+		return View::make('photogallery::photos.create');
 	}
 
 	/**
@@ -70,7 +76,7 @@ class PhotosController extends BaseController {
 	{
 		$photo = $this->photo->findOrFail($id);
 
-		return View::make('photos.show', compact('photo'));
+		return View::make('photogallery::photos.show', compact('photo'));
 	}
 
 	/**
@@ -88,7 +94,7 @@ class PhotosController extends BaseController {
 			return Redirect::route('photos.index');
 		}
 
-		return View::make('photos.edit', compact('photo'));
+		return View::make('photogallery::photos.edit', compact('photo'));
 	}
 
 	/**

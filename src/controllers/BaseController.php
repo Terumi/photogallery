@@ -1,4 +1,4 @@
-<?php namespace Ffy\Photogallery\Controllers;
+<?php namespace Ffy\Photogallery;
 
 use Illuminate\Routing\Controller;
 
@@ -16,5 +16,4 @@ class BaseController extends Controller {
 			$this->layout = View::make($this->layout);
 		}
 	}
-
 }
