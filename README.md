@@ -20,10 +20,14 @@ Todos:
 -------
 - add albums
 - add a 'favorite' flag to the images
-- add bootstrap3 /cdn
+- add pagination
+- ~~photo index page layout~~
+- photo upload page layout
+- photo edit page layout
+- ~~add bootstrap3 /cdn~~
   * set the markup in forms
 - ~~upload files on upload~~
-- ~~delete files on delete!!
+- ~~delete files on delete~~
 - ~~implement intervention~~
 - ~~add a config file~~
   * ~~add prefix~~

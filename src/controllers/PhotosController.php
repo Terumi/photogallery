@@ -22,7 +22,12 @@ class PhotosController extends BaseController
 
     public function index()
     {
-        $photos = $this->photo->all();
+        $pagination_items = Config::get('photogallery::pagination_items');
+        if($pagination_items){
+            $photos = $this->photo->paginate($pagination_items);
+        } else {
+            $photos = $this->photo->all();
+        }
         return View::make('photogallery::photos.index', compact('photos'));
     }
 
@@ -48,7 +53,7 @@ class PhotosController extends BaseController
             $file = Input::file('url');
             $file_name = time() . '-' . strtolower($file->getClientOriginalName());
             $image = Image::make($file->getRealPath());
-            $path = Config::get('photogallery::upload_folder');
+            $path = public_path().'/'.Config::get('photogallery::upload_folder');
             File::exists($path) or File::makeDirectory($path);
             $image->save($path . $file_name);
 
@@ -108,7 +113,7 @@ class PhotosController extends BaseController
                 * save the f@#$ image
                 * change the input to the real file name
                 */
-                $path = Config::get('photogallery::upload_folder');
+                $path = public_path().'/'.Config::get('photogallery::upload_folder');
                 if (File::exists($path . $photo->url))
                     File::delete($path . $photo->url);
                 $file = Input::file('url');
@@ -137,7 +142,7 @@ class PhotosController extends BaseController
         * return
         */
         $photo = $this->photo->find($id);
-        $path = Config::get('photogallery::upload_folder');
+        $path = public_path().'/'.Config::get('photogallery::upload_folder');
         if (File::exists($path . $photo->url))
             File::delete($path . $photo->url);
         $photo->delete();

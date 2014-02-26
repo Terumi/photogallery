@@ -1,4 +1,4 @@
-@extends('layouts.scaffold')
+@extends('photogallery::layouts.scaffold')
 
 @section('main')
 
