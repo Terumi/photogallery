@@ -20,12 +20,12 @@ Todos:
 -------
 - add albums
 - ~~add a 'favorite' flag to the images~~
-- add pagination
+- ~~add pagination~~
 - ~~photo index page layout~~
-- photo upload page layout
-- photo edit page layout
+- ~~photo upload page layout~~
+- ~~photo edit page layout~~
 - ~~add bootstrap3 /cdn~~
-  * set the markup in forms
+  * ~~set the markup in forms~~
 - ~~upload files on upload~~
 - ~~delete files on delete~~
 - ~~implement intervention~~
@@ -38,3 +38,4 @@ Todos:
   * add crop functionality
   * add grayscale functionality
 - ~~prefix tables~~
+- drag and drop upload
