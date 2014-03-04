@@ -23,7 +23,7 @@
 		<li>
             <br/>
 			{{ Form::submit('Update', array('class' => 'btn btn-info')) }}
-			{{ link_to_action('Ffy\Photogallery\PhotosController@show', 'Cancel', $photo->id, array('class' => 'btn')) }}
+			{{ link_to_action('Ffy\Photogallery\PhotosController@show', 'Cancel', $photo->id, array('class' => 'btn btn-warning')) }}
 		</li>
 	</ul>
 {{ Form::close() }}
