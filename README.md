@@ -19,7 +19,7 @@ Installation
 Todos:
 -------
 - ~~add albums~~
-- add photo to albums relations
+- ~~add photo to albums relations~~
 - assign photos to albums
 - ~~add index page~~
 - ~~add navigation to master page~~

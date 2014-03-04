@@ -11,8 +11,9 @@
     @foreach (array_chunk($albums->all(), 4) as $bundle)
     <div class="row">
         @foreach ($bundle as $album)
+
         <div class="col-lg-3">
-            <h3>{{{ $album->name }}}<span class="badge pull-right">{{rand(0, 100)}}</span></h3>
+            <h3>{{{ $album->name }}}<span class="badge pull-right">{{count($album->photos)}}</span></h3>
             <hr class="bottom-sm"/>
             <p>description:</p>
             <p class="text-muted">{{{ $album->description }}}</p>

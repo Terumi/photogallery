@@ -8,7 +8,7 @@ class Album extends \Eloquent {
     );
 
     public function photos(){
-        return range(0, floor(rand(0, 20)));
+        return $this->belongsToMany('Ffy\Photogallery\Photo', 'ffy_album_photo');
     }
 
 }
