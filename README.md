@@ -14,11 +14,18 @@ Installation
 ``'Image' => 'Intervention\Image\Facades\Image',``
 
 4. migrate the package tables with:
-``php artisan migrate --package="vendor/package"``
+``php artisan migrate --package="ffy/photogallery"``
 
 Todos:
 -------
-- add albums
+- ~~add albums~~
+- add photo to albums relations
+- assign photos to albums
+- ~~add index page~~
+- ~~add navigation to master page~~
+- add active states
+- add tags to photos
+- ~~add tags to albums~~
 - ~~add a 'favorite' flag to the images~~
 - ~~add pagination~~
 - ~~photo index page layout~~
