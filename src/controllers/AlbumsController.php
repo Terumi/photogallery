@@ -1,5 +1,6 @@
 <?php namespace Ffy\Photogallery;
 
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
@@ -122,6 +123,21 @@ class AlbumsController extends \BaseController
         $album = $this->album->find($id);
         $album->delete();
         return Redirect::action('Ffy\Photogallery\AlbumsController@index');
+    }
+
+    public function assign($id){
+        $album = $this->album->findOrFail($id);
+
+        $pagination_items = Config::get('photogallery::pagination_items');
+        if($pagination_items){
+            $photos = Photo::paginate($pagination_items);
+        } else {
+            $photos = Photo::all();
+        }
+
+        return View::make('photogallery::albums.assign')
+            ->with('album', $album)
+            ->with('photos', $photos);
     }
 
 }

@@ -39,6 +39,8 @@ Todos:
 - ~~add a config file~~
   * ~~add prefix~~
   * ~~add upload folder~~
+  * max photo size
+  * min photo size
   * create sprites
   * add multiple versions of the image
   * add resize functionality

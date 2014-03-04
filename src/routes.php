@@ -3,8 +3,9 @@
 Route::get(Config::get('photogallery::url_prefix') . 'photogallery/', function () {
         return View::make('photogallery::index');
     });
-Route::get('favorite/{id}', 'Ffy\Photogallery\PhotosController@favorite');
+Route::get(Config::get('photogallery::url_prefix') . 'favorite/{id}', 'Ffy\Photogallery\PhotosController@favorite');
 Route::resource(Config::get('photogallery::url_prefix') . 'photogallery/photos', 'Ffy\Photogallery\PhotosController');
+Route::get(Config::get('photogallery::url_prefix') . 'photogallery/assign/{id}', 'Ffy\Photogallery\AlbumsController@assign');
 Route::resource(Config::get('photogallery::url_prefix') . 'photogallery/albums', 'Ffy\Photogallery\AlbumsController');
 
 Route::get(Config::get('photogallery::url_prefix') . 'photogallery/test', function () {

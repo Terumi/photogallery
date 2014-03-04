@@ -15,11 +15,17 @@
         <div class="col-lg-3">
             <h3>{{{ $album->name }}}<span class="badge pull-right">{{count($album->photos)}}</span></h3>
             <hr class="bottom-sm"/>
+            @if($album->description)
             <p>description:</p>
             <p class="text-muted">{{{ $album->description }}}</p>
+            @endif
+            @if($album->tags)
             <p>tags:</p>
             <p class="text-muted">{{{ $album->tags }}}</p>
+            @endif
             <br/>
+            {{ link_to_action('Ffy\Photogallery\AlbumsController@assign', 'Add photos', array($album->id), array('class' =>
+            'btn btn-primary btn-xs')) }}
             {{ link_to_action('Ffy\Photogallery\AlbumsController@edit', 'Edit', array($album->id), array('class' =>
             'btn btn-info btn-xs')) }}
             {{ Form::open(array('method' => 'DELETE', 'action' => array('Ffy\Photogallery\AlbumsController@destroy',

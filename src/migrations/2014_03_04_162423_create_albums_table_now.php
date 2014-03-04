@@ -21,7 +21,6 @@ class CreateAlbumsTable extends Migration {
         });
 	}
 
-
 	/**
 	 * Reverse the migrations.
 	 *
