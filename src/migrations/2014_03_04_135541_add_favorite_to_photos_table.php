@@ -29,5 +29,4 @@ class AddFavoriteToPhotosTable extends Migration {
             $table->dropColumn('favorite');
         });
 	}
-
 }
