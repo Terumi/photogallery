@@ -148,4 +148,11 @@ class PhotosController extends BaseController
         $photo->delete();
         return Redirect::action('Ffy\Photogallery\PhotosController@index');
     }
+
+    public function favorite($id){
+        $photo = $this->photo->find($id);
+        $photo->favorite = !$photo->favorite;
+        $photo->save();
+        return Redirect::back();
+    }
 }

@@ -19,7 +19,7 @@ Installation
 Todos:
 -------
 - add albums
-- add a 'favorite' flag to the images
+- ~~add a 'favorite' flag to the images~~
 - add pagination
 - ~~photo index page layout~~
 - photo upload page layout

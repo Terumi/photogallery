@@ -18,12 +18,19 @@
             @endif
             <hr/>
             <img src="{{asset(Config::get('photogallery::upload_folder').$photo->url)}}" class="img-rounded img-responsive img-uploaded" alt=""/>
+            @if($photo->favorite)
+            <a href="{{ action('Ffy\Photogallery\PhotosController@favorite', array($photo->id)) }}" class="btn btn-xs btn-success"><i class="glyphicon glyphicon-star"></i></a>
+            @else
+            <a href="{{ action('Ffy\Photogallery\PhotosController@favorite', array($photo->id))}}" class="btn btn-xs btn-warning"><i class="glyphicon glyphicon-star-empty"></i></a>
+            @endif
+
             {{ link_to_action('Ffy\Photogallery\PhotosController@edit', 'Edit', array($photo->id), array('class' =>
             'btn btn-info btn-xs')) }}
             {{ Form::open(array('method' => 'DELETE', 'action' => array('Ffy\Photogallery\PhotosController@destroy',
             $photo->id))) }}
             {{ Form::submit('Delete', array('class' => 'btn btn-danger btn-xs')) }}
             {{ Form::close() }}
+
         </div>
         @endforeach
     </div>

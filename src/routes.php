@@ -28,4 +28,5 @@ Route::get(Config::get('photogallery::url_prefix').'photogallery/test', function
     //return Response::make($imgs[0], 200, ['Content-Type' => 'image/jpg']);*/
 });
 
+Route::get('favorite/{id}', 'Ffy\Photogallery\PhotosController@favorite');
 Route::resource(Config::get('photogallery::url_prefix').'photogallery/photos', 'Ffy\Photogallery\PhotosController');
