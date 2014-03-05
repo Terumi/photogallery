@@ -155,11 +155,6 @@ class AlbumsController extends \BaseController
         $album = $this->album->findOrFail($input['id']);
         $photo = Photo::findOrFail($input['photo_id']);
         $album->photos()->detach($photo);
-
         return Redirect::back();
     }
-
-
-
-
 }
