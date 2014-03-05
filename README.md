@@ -24,7 +24,7 @@ Todos:
 - ~~add index page~~
 - ~~add navigation to master page~~
 - add active states
-- add tags to photos
+- ~~add tags to photos~~
 - ~~add tags to albums~~
 - ~~add a 'favorite' flag to the images~~
 - ~~add pagination~~
@@ -35,6 +35,7 @@ Todos:
   * ~~set the markup in forms~~
 - ~~upload files on upload~~
 - ~~delete files on delete~~
+- ~~add preview in edit photo~~
 - ~~implement intervention~~
 - ~~add a config file~~
   * ~~add prefix~~

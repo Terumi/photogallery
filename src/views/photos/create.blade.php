@@ -19,6 +19,11 @@
             {{ Form::text('alt', null, array('class'=> 'form-control')) }}
         </li>
 
+        <li>
+            {{ Form::label('tags', 'Tags:') }}
+            {{ Form::text('tags', null, array('class'=> 'form-control')) }}
+        </li>
+
 		<li>
             <br/>
 			{{ Form::submit('Submit', array('class' => 'btn btn-info')) }}

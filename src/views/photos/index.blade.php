@@ -17,7 +17,7 @@
             <p class="text-muted">{{{ $photo->alt }}}</p>
             @endif
             <hr/>
-            <img src="{{asset(Config::get('photogallery::upload_folder').$photo->url)}}" class="img-rounded img-responsive img-uploaded" alt=""/>
+            <img src="{{asset(Config::get('photogallery::upload_folder').$photo->url)}}" class="img-rounded img-responsive img-uploaded" alt="{{$photo->alt}}"/>
             @if($photo->favorite)
             <a href="{{ action('Ffy\Photogallery\PhotosController@favorite', array($photo->id)) }}" class="btn btn-xs btn-success"><i class="glyphicon glyphicon-star"></i></a>
             @else
