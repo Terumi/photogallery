@@ -23,5 +23,5 @@
             "Ffy\\Photogallery\\": "src/"
         }
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "dev"
 }
