@@ -2,7 +2,7 @@
 
 @section('main')
 
-<h1>Edit Photo</h1>
+<h1>Edit Album</h1>
 {{ Form::model($album, array('method' => 'PATCH', 'action' => array('Ffy\Photogallery\AlbumsController@update', $album->id))) }}
 	<ul class="list-unstyled">
         <li>

@@ -2,9 +2,9 @@
 
 @section('main')
 
-<h1>Show Photo</h1>
+<h1>Show Album</h1>
 
-<p>{{ link_to_action('Ffy\Photogallery\AlbumsController@index', 'Return to all photos') }}</p>
+<p>{{ link_to_action('Ffy\Photogallery\AlbumsController@index', 'Return to all albums') }}</p>
 
 <table class="table table-striped table-bordered">
 	<thead>
