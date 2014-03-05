@@ -8,7 +8,6 @@ class Album extends \Eloquent {
     );
 
     public function photos(){
-        return $this->belongsToMany('Ffy\Photogallery\Photo', 'ffy_album_photo');
+        return $this->belongsToMany('Ffy\Photogallery\Photo', 'ffy_album_photo')->withTimestamps();
     }
-
 }

@@ -20,7 +20,7 @@ Todos:
 -------
 - ~~add albums~~
 - ~~add photo to albums relations~~
-- assign photos to albums
+- ~~assign photos to albums~~
 - ~~add index page~~
 - ~~add navigation to master page~~
 - add active states

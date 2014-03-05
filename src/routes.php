@@ -6,6 +6,8 @@ Route::get(Config::get('photogallery::url_prefix') . 'photogallery/', function (
 Route::get(Config::get('photogallery::url_prefix') . 'favorite/{id}', 'Ffy\Photogallery\PhotosController@favorite');
 Route::resource(Config::get('photogallery::url_prefix') . 'photogallery/photos', 'Ffy\Photogallery\PhotosController');
 Route::get(Config::get('photogallery::url_prefix') . 'photogallery/assign/{id}', 'Ffy\Photogallery\AlbumsController@assign');
+Route::post(Config::get('photogallery::url_prefix') . 'photogallery/addPhoto', 'Ffy\Photogallery\AlbumsController@addPhoto');
+Route::post(Config::get('photogallery::url_prefix') . 'photogallery/removePhoto', 'Ffy\Photogallery\AlbumsController@removePhoto');
 Route::resource(Config::get('photogallery::url_prefix') . 'photogallery/albums', 'Ffy\Photogallery\AlbumsController');
 
 Route::get(Config::get('photogallery::url_prefix') . 'photogallery/test', function () {

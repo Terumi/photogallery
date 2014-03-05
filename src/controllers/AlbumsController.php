@@ -140,4 +140,26 @@ class AlbumsController extends \BaseController
             ->with('photos', $photos);
     }
 
+    public function addPhoto(){
+
+        $input = Input::except('_token');
+        $album = $this->album->findOrFail($input['id']);
+        $photo = Photo::findOrFail($input['photo_id']);
+        $album->photos()->attach($photo);
+
+        return Redirect::back();
+    }
+
+    public function removePhoto(){
+        $input = Input::except('_token');
+        $album = $this->album->findOrFail($input['id']);
+        $photo = Photo::findOrFail($input['photo_id']);
+        $album->photos()->detach($photo);
+
+        return Redirect::back();
+    }
+
+
+
+
 }
