@@ -4,17 +4,28 @@ This is a Laravel 4.1 gallery package using bootstrap3 and [Intervention Image] 
 
 Installation
 ------------
-1. add this to the providers array on your config/app.php:
+1. install it throught composer by:
+``composer require ffy/photogallery``
+
+2. version:
+``dev-master``
+
+3. add this to the providers array on your config/app.php:
 ``'Ffy\Photogallery\PhotogalleryServiceProvider'``
 
-2. add the intervention package to the providers array on your config/app.php:
+4. add the intervention package to the providers array on your config/app.php:
 ``'Intervention\Image\ImageServiceProvider'``
 
-3. add the intervention facade to the aliases array on your config/app.php:
+5. add the intervention facade to the aliases array on your config/app.php:
 ``'Image' => 'Intervention\Image\Facades\Image',``
 
-4. migrate the package tables with:
+6. migrate the package tables with:
 ``php artisan migrate --package="ffy/photogallery"``
+
+7. publish the package configuration file by:
+``php artisan config:publish ffy/photogallery``
+
+8. under app/config/packages/ffy you'll find the configuration file
 
 Todos:
 -------
