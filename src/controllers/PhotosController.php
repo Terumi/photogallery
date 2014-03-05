@@ -75,6 +75,21 @@ class PhotosController extends BaseController
                 $image->resize(null, Config::get('photogallery::max_height'), true);
             }
 
+            /*
+             * if size is set...
+             */
+            if (Config::get('photogallery::size')[0] > 0 && Config::get('photogallery::size')[1] > 0) {
+                $image->grab(Config::get('photogallery::size')[0], Config::get('photogallery::size')[1]);
+            }
+            /*
+             * if greyscale is set to true
+             */
+            if (Config::get('photogallery::greyscale')) {
+                $image->greyscale();
+            }
+
+
+
             $image->save($path . $file_name);
 
             /*
@@ -82,12 +97,33 @@ class PhotosController extends BaseController
              * save the record
              * go back
              */
+
             $input['url'] = $file_name;
             $this->photo->create($input);
+
+            /*
+             * alternate versions:
+             *  if there are entries in the versions array
+             *  foreach version get the path
+             *  resize and save
+             */
+
+            if (count(Config::get('photogallery::versions')) > 0) {
+                foreach (Config::get('photogallery::versions') as $version) {
+                    $path = public_path() . '/' . $version['upload_folder'];
+                    File::exists($path) or File::makeDirectory($path);
+                    $image = Image::make($file->getRealPath());
+                    $image->grab($version['size'][0], $version['size'][1]);
+                    if ($version['greyscale']) {
+                        $image->greyscale();
+                    }
+                    $image->save($path . $file_name);
+                }
+            }
             return Redirect::action('Ffy\Photogallery\PhotosController@index');
         }
 
-        return Redirect::route('photos.create')
+        return Redirect::action('Ffy\Photogallery\PhotosController@create')
             ->withInput()
             ->withErrors($validation)
             ->with('message', 'There were validation errors.');
@@ -166,7 +202,20 @@ class PhotosController extends BaseController
         if (File::exists($path . $photo->url))
             File::delete($path . $photo->url);
         $photo->delete();
-        return Redirect::action('Ffy\Photogallery\PhotosController@index');
+
+        /*
+         * if exist in the configuration file, delete all other versions
+         */
+        if (count(Config::get('photogallery::versions')) > 0) {
+            foreach (Config::get('photogallery::versions') as $version) {
+                $path = public_path() . '/' . $version['upload_folder'];
+                if (File::exists($path . $photo->url))
+                    File::delete($path . $photo->url);
+                $photo->delete();
+            }
+        }
+
+        return Redirect::back();
     }
 
     public function favorite($id)

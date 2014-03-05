@@ -43,9 +43,12 @@ Todos:
   * ~~add upload folder~~
   * ~~max photo width~~
   * ~~max photo height~~
+  * ~~add multiple versions of the image~~
+  * ~~add resize functionality~~
+  * ~~add grayscale functionality~~
   * create sprites
-  * add multiple versions of the image
-  * add resize functionality
   * add crop functionality
-  * add grayscale functionality
+  * add instagram/hipster/derp filters (maybe)
+  * add watermark thingy
 - drag and drop upload
+- rerun all the configuration options for all photos uploaded
