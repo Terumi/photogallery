@@ -36,10 +36,6 @@
         @endforeach
     </div>
     @endforeach
-
-    @if(Config::get('photogallery::pagination_items'))
-        {{ $albums->links() }}
-    @endif
 @else
 There are no albums
 @endif
