@@ -23,7 +23,7 @@ class PhotosController extends BaseController
     public function index()
     {
         $pagination_items = Config::get('photogallery::pagination_items');
-        if($pagination_items){
+        if ($pagination_items) {
             $photos = $this->photo->paginate($pagination_items);
         } else {
             $photos = $this->photo->all();
@@ -53,8 +53,28 @@ class PhotosController extends BaseController
             $file = Input::file('url');
             $file_name = time() . '-' . strtolower($file->getClientOriginalName());
             $image = Image::make($file->getRealPath());
-            $path = public_path().'/'.Config::get('photogallery::upload_folder');
+            $path = public_path() . '/' . Config::get('photogallery::upload_folder');
             File::exists($path) or File::makeDirectory($path);
+
+            /*
+             * if the config max_width is set
+             * and the uploaded image is wider than that number
+             * resize the photo
+             */
+            if (Config::get('photogallery::max_width') > 0 && $image->width > Config::get('photogallery::max_width')) {
+
+                $image->resize(Config::get('photogallery::max_width'), null, true);
+            }
+
+            /*
+             * if the config max_width is set
+             * and the uploaded image is wider than that number
+             * resize the photo
+             */
+            if (Config::get('photogallery::max_height') > 0 && $image->height > Config::get('photogallery::max_height')) {
+                $image->resize(null, Config::get('photogallery::max_height'), true);
+            }
+
             $image->save($path . $file_name);
 
             /*
@@ -113,7 +133,7 @@ class PhotosController extends BaseController
                 * save the f@#$ image
                 * change the input to the real file name
                 */
-                $path = public_path().'/'.Config::get('photogallery::upload_folder');
+                $path = public_path() . '/' . Config::get('photogallery::upload_folder');
                 if (File::exists($path . $photo->url))
                     File::delete($path . $photo->url);
                 $file = Input::file('url');
@@ -142,14 +162,15 @@ class PhotosController extends BaseController
         * return
         */
         $photo = $this->photo->find($id);
-        $path = public_path().'/'.Config::get('photogallery::upload_folder');
+        $path = public_path() . '/' . Config::get('photogallery::upload_folder');
         if (File::exists($path . $photo->url))
             File::delete($path . $photo->url);
         $photo->delete();
         return Redirect::action('Ffy\Photogallery\PhotosController@index');
     }
 
-    public function favorite($id){
+    public function favorite($id)
+    {
         $photo = $this->photo->find($id);
         $photo->favorite = !$photo->favorite;
         $photo->save();

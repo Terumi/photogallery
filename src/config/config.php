@@ -7,5 +7,8 @@ return array(
     'upload_folder' => '/uploaded/',
     // how many photos should the index page should display each time. Zero disables pagination.
     'pagination_items' => 0,
-    'max-size' => 0
+    // the photos that exceed that width are going to be resized
+    'max_width' => 960,
+    // the photos that exceed that height are going to be resized
+    'max_height' => 0
 );

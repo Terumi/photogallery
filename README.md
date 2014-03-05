@@ -37,15 +37,15 @@ Todos:
 - ~~delete files on delete~~
 - ~~add preview in edit photo~~
 - ~~implement intervention~~
+- ~~prefix tables~~
 - ~~add a config file~~
   * ~~add prefix~~
   * ~~add upload folder~~
-  * max photo size
-  * min photo size
+  * ~~max photo width~~
+  * ~~max photo height~~
   * create sprites
   * add multiple versions of the image
   * add resize functionality
   * add crop functionality
   * add grayscale functionality
-- ~~prefix tables~~
 - drag and drop upload
