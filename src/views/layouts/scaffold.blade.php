@@ -13,10 +13,17 @@
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">Ffy photogallery</a>
             </div>
+
+            <?php
+                $photos_class = ( Request::is('*/photos') || Request::is('*/photos'.'/*') ) ? ' class="active"' : '';
+                $albums_class = ( Request::is('*/albums') || Request::is('*/albums'.'/*') ) ? ' class="active"' : '';
+            ?>
+
+
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="{{action('Ffy\Photogallery\AlbumsController@index')}}">Albums</a></li>
-                    <li><a href="{{action('Ffy\Photogallery\PhotosController@index')}}">Photos</a></li>
+                    <li {{$albums_class}}><a href="{{action('Ffy\Photogallery\AlbumsController@index')}}">Albums</a></li>
+                    <li {{$photos_class}}><a href="{{action('Ffy\Photogallery\PhotosController@index')}}">Photos</a></li>
                 </ul>
             </div>
         </div>

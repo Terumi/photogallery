@@ -23,7 +23,7 @@ Todos:
 - ~~assign photos to albums~~
 - ~~add index page~~
 - ~~add navigation to master page~~
-- add active states
+- ~~add active states~~
 - ~~add tags to photos~~
 - ~~add tags to albums~~
 - ~~add a 'favorite' flag to the images~~

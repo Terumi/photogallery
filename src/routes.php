@@ -5,7 +5,7 @@ Route::get(Config::get('photogallery::url_prefix') . 'photogallery/', function (
     });
 Route::get(Config::get('photogallery::url_prefix') . 'favorite/{id}', 'Ffy\Photogallery\PhotosController@favorite');
 Route::resource(Config::get('photogallery::url_prefix') . 'photogallery/photos', 'Ffy\Photogallery\PhotosController');
-Route::get(Config::get('photogallery::url_prefix') . 'photogallery/assign/{id}', 'Ffy\Photogallery\AlbumsController@assign');
+Route::get(Config::get('photogallery::url_prefix') . 'photogallery/albums/assign/{id}', 'Ffy\Photogallery\AlbumsController@assign');
 Route::post(Config::get('photogallery::url_prefix') . 'photogallery/addPhoto', 'Ffy\Photogallery\AlbumsController@addPhoto');
 Route::post(Config::get('photogallery::url_prefix') . 'photogallery/removePhoto', 'Ffy\Photogallery\AlbumsController@removePhoto');
 Route::resource(Config::get('photogallery::url_prefix') . 'photogallery/albums', 'Ffy\Photogallery\AlbumsController');
@@ -21,17 +21,11 @@ Route::get(Config::get('photogallery::url_prefix') . 'photogallery/test', functi
             if (isset($image)) {
                 $prev_height = $image->height;
                 $image->resizeCanvas($image->width, $prev_height + $img->height, 'top-left');
-                //$img->opacity(50);
                 $image->insert($img, 0, $prev_height);
             } else {
-                // (int $width, int $height, [string $anchor, [boolean $relative, [mixed $bgcolor]]])
                 $image = $img;
-                //$image->resizeCanvas(null, 450, 'top-left', false, '#ff0546');
             }
         }
-        // $image->pixelate(2)->blur(15);
-        //$image->crop(140, 140)->grayscale()->save(public_path().'/images/asd.jpg');
         return Response::make($image, 200, ['Content-Type' => 'image/jpg']);
-        //return Response::make($imgs[0], 200, ['Content-Type' => 'image/jpg']);*/
     });
 
