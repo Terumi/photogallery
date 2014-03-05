@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateAlbumsTable extends Migration {
+class CreateAlbumsTableNow extends Migration {
 
 	/**
 	 * Run the migrations.
