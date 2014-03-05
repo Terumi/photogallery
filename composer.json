@@ -7,7 +7,7 @@
             "email": "tasos@ffyeah.gr"
         }
     ],
-    "license": "CC Attribution",
+    "license": "CC-BY-3.0",
     "require": {
         "php": ">=5.3.0",
         "illuminate/support": "4.1.*",
