@@ -13,7 +13,7 @@ class AddTagsToPhotosTable extends Migration {
 	public function up()
 	{
         Schema::table('ffy_photos', function(Blueprint $table) {
-            $table->string('tags');
+            $table->string('tags')->nullable();
         });
 	}
 
