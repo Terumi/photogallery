@@ -1,5 +1,7 @@
 Photogallery
 ============
+[![Latest Stable Version](https://poser.pugx.org/ffy/photogallery/v/stable.png)](https://packagist.org/packages/ffy/photogallery) [![Total Downloads](https://poser.pugx.org/ffy/photogallery/downloads.png)](https://packagist.org/packages/ffy/photogallery) [![Latest Unstable Version](https://poser.pugx.org/ffy/photogallery/v/unstable.png)](https://packagist.org/packages/ffy/photogallery) [![License](https://poser.pugx.org/ffy/photogallery/license.png)](https://packagist.org/packages/ffy/photogallery)
+
 This is a Laravel 4.1 gallery package using bootstrap3 and [Intervention Image] (http://intervention.olivervogel.net/) by Oliver Vogel
 
 Installation
