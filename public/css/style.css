@@ -1,18 +1,23 @@
 form {
     display: inline-block;
 }
+
 .img-uploaded {
     margin-bottom: 5px;
 }
+
 h4, p {
     margin-bottom: 0;
 }
+
 hr {
     margin-top: 5px;
 }
+
 .row {
     margin-top: 15px;
 }
+
 .bottom-sm {
     margin-bottom: 5px;
 }

@@ -18,7 +18,6 @@
             {{ Form::label('alt', 'Alt text:') }}
             {{ Form::text('alt', null, array('class'=> 'form-control')) }}
         </li>
-
         <li>
             {{ Form::label('tags', 'Tags:') }}<br/>
             {{ Form::text('tags', null, array('class'=> 'form-control', 'data-role'=> 'tagsinput', 'placeholder'=> 'Add tags')) }}

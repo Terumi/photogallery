@@ -27,12 +27,12 @@
         </div>
     </nav>
         <div class="container">
-			@if (Session::has('message'))
-				<div class="alert alert-warning">
-					<p>{{ Session::get('message') }}</p>
-				</div>
-			@endif
-			@yield('main')
+        @if (Session::has('message'))
+            <div class="alert alert-warning">
+                <p>{{ Session::get('message') }}</p>
+            </div>
+        @endif
+        @yield('main')
 		</div>
 	</body>
 </html>

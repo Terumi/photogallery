@@ -39,6 +39,7 @@ Todos:
 - ~~add active states~~
 - ~~add tags to photos~~
 - ~~add tags to albums~~
+- ~~add tags plugin~~
 - ~~add a 'favorite' flag to the images~~
 - ~~add pagination~~
 - ~~photo index page layout~~

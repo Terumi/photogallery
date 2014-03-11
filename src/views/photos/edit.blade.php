@@ -26,7 +26,6 @@
             {{ Form::label('tags', 'Tags:') }}<br/>
             {{ Form::text('tags', null, array('class'=> 'form-control','data-role'=> 'tagsinput', 'placeholder'=> 'Add tags')) }}
         </li>
-
         <li>
             <br/>
             {{ Form::submit('Update', array('class' => 'btn btn-info')) }}
