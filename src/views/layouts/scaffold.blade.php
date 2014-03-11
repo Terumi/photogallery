@@ -14,12 +14,10 @@
             <div class="navbar-header">
                 <a class="navbar-brand" href="{{url(Config::get('photogallery::url_prefix').'photogallery') }}">Ffy photogallery</a>
             </div>
-
             <?php
                 $photos_class = ( Request::is('*/photos') || Request::is('*/photos'.'/*') ) ? ' class="active"' : '';
                 $albums_class = ( Request::is('*/albums') || Request::is('*/albums'.'/*') ) ? ' class="active"' : '';
             ?>
-
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li {{$albums_class}}><a href="{{action('Ffy\Photogallery\AlbumsController@index')}}">Albums</a></li>

@@ -16,7 +16,7 @@
         </li>
 
         <li>
-            {{ Form::label('tags', 'Tags:') }} <br/>
+            {{ Form::label('tags', 'Tags:') }}<br/>
 
             {{ Form::text('tags', null, array('class'=> 'form-control','data-role'=> 'tagsinput', 'placeholder'=> 'Add tags')) }}
         </li>
