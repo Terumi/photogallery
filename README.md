@@ -51,6 +51,7 @@ Todos:
 - ~~add preview in edit photo~~
 - ~~implement intervention~~
 - ~~prefix tables~~
+- add TimSchlechter/bootstrap-tagsinput
 - ~~add a config file~~
   * ~~add prefix~~
   * ~~add upload folder~~
