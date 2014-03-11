@@ -2,7 +2,7 @@ Photogallery
 ============
 ![Total Downloads](https://poser.pugx.org/ffy/photogallery/downloads.png) 
 
-This is a Laravel 4.1 gallery package using bootstrap3 and [Intervention Image] (http://intervention.olivervogel.net/) by Oliver Vogel
+This is a Laravel 4.1 gallery package using bootstrap3, [Intervention Image] (http://intervention.olivervogel.net/) by Oliver Vogel and [bootstrap-tagsinput] (https://github.com/TimSchlechter/bootstrap-tagsinput) by Tim Schlechter
 
 Installation
 ------------
@@ -27,7 +27,10 @@ Installation
 7. publish the package configuration file by:
 ``php artisan config:publish ffy/photogallery``
 
-8. under app/config/packages/ffy you'll find the configuration file
+8. publish the package asset files by:
+``php artisan asset:publish "ffy/photogallery"``
+
+9. under app/config/packages/ffy you'll find the configuration file
 
 Todos:
 -------
@@ -52,7 +55,7 @@ Todos:
 - ~~add preview in edit photo~~
 - ~~implement intervention~~
 - ~~prefix tables~~
-- add TimSchlechter/bootstrap-tagsinput
+- ~~add TimSchlechter/bootstrap-tagsinput~~
 - ~~add a config file~~
   * ~~add prefix~~
   * ~~add upload folder~~
