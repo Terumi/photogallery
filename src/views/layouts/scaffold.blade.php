@@ -2,13 +2,11 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-        <script src="{{asset('packages/ffy/photogallery/bower_components/jquery/dist/jquery.min.js')}}"></script>
-        <script src="{{asset('packages/ffy/photogallery/bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js')}}"></script>
+        <script src="{{asset('packages/ffy/photogallery/js/jquery.min.js')}}"></script>
+        <script src="{{asset('packages/ffy/photogallery/js/bootstrap-tagsinput.min.js')}}"></script>
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-		<link href="{{asset('packages/ffy/photogallery/bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.css')}}" rel="stylesheet">
-        <style>
-            form{display:inline-block;}.img-uploaded{margin-bottom: 5px;}h4, p{margin-bottom: 0;}hr{margin-top: 5px;}.row{margin-top: 15px;}.bottom-sm{margin-bottom: 5px;}
-        </style>
+		<link href="{{asset('packages/ffy/photogallery/css/bootstrap-tagsinput.css')}}" rel="stylesheet">
+		<link href="{{asset('packages/ffy/photogallery/css/style.css')}}" rel="stylesheet">
 	</head>
 	<body>
     <nav class="navbar navbar-default" role="navigation">
