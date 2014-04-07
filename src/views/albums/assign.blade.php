@@ -2,7 +2,7 @@
 
 @section('main')
 
-<h1>Assign photos to "{{$album->name}}"<span class="badge">{{count($album->photos)}} photos</span></h1>
+<h1>Assign photos to "{{ $album->name }}"<span class="badge">{{ count($album->photos) }} photos</span></h1>
 
 @if ($photos->count())
 @foreach (array_chunk($photos->all(), 6) as $bundle)
@@ -54,5 +54,3 @@ There are no photos
 @endif
 
 @stop
-
-
