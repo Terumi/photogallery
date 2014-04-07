@@ -15,7 +15,6 @@ Route::group(array('prefix' => Config::get('photogallery::url_prefix')), functio
 
 });
 
-
 Route::get(Config::get('photogallery::url_prefix') . 'photogallery/test', function () {
     $imgs = array();
     $imgs[] = Image::make(file_get_contents('http://cf.geekdo-images.com/images/pic1935564_md.jpg'));
