@@ -1,36 +1,36 @@
 Photogallery
 ============
-![Total Downloads](https://poser.pugx.org/ffy/photogallery/downloads.png) 
+![Total Downloads](https://poser.pugx.org/ffy/photogallery/downloads.png)
 
 This is a Laravel 4.1 gallery package using bootstrap3, [Intervention Image] (http://intervention.olivervogel.net/) by Oliver Vogel and [bootstrap-tagsinput] (https://github.com/TimSchlechter/bootstrap-tagsinput) by Tim Schlechter
 
 Installation
 ------------
-1. install it throught composer by:
+1. Install it through composer: <br>
 ``composer require ffy/photogallery``
 
-2. version:
+2. Version: <br>
 ``dev-master``
 
-3. add this to the providers array on your config/app.php:
-``'Ffy\Photogallery\PhotogalleryServiceProvider'``
+3. Add this to the providers array in your config/app.php: <br>
+``'Ffy\Photogallery\PhotogalleryServiceProvider',``
 
-4. add the intervention package to the providers array on your config/app.php:
-``'Intervention\Image\ImageServiceProvider'``
+4. Add the intervention package to the providers array in your config/app.php: <br>
+``'Intervention\Image\ImageServiceProvider',``
 
-5. add the intervention facade to the aliases array on your config/app.php:
+5. Add the intervention facade to the aliases array on your config/app.php: <br>
 ``'Image' => 'Intervention\Image\Facades\Image',``
 
-6. migrate the package tables with:
+6. Migrate the package tables: <br>
 ``php artisan migrate --package="ffy/photogallery"``
 
-7. publish the package configuration file by:
+7. Publish the package configuration file: <br>
 ``php artisan config:publish ffy/photogallery``
 
-8. publish the package asset files by:
+8. Publish the package asset files: <br>
 ``php artisan asset:publish "ffy/photogallery"``
 
-9. under app/config/packages/ffy you'll find the configuration file
+**Under app/config/packages/ffy you will find the configuration file**
 
 Todos:
 -------
