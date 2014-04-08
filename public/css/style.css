@@ -16,3 +16,9 @@ hr {
 .bottom-sm {
     margin-bottom: 5px;
 }
+
+.album{
+    background-color: #ececec;
+    padding: 15px;
+    border-radius: 5px;
+}
