@@ -6,7 +6,7 @@ return array(
     // the upload folder (it should be one level folder, otherwise, you should create  the structure manually)
     'upload_folder' => '/uploaded/',
     // how many photos should the index page should display each time. Zero disables pagination.
-    'pagination_items' => 12,
+    'pagination_items' => 8,
     // the photos that exceed that width are going to be resized / 0 is the default-do-nothing value
     'max_width' => 0,
     // the photos that exceed that height are going to be resized / 0 is the default-do-nothing value
