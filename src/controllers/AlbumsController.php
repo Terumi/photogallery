@@ -130,9 +130,9 @@ class AlbumsController extends \BaseController
 
         $pagination_items = Config::get('photogallery::pagination_items');
         if($pagination_items){
-            $photos = Photo::paginate($pagination_items);
+            $photos = Photo::orderBy('id', 'desc')->paginate($pagination_items);
         } else {
-            $photos = Photo::all();
+            $photos = Photo::orderBy('id', 'desc')->get();
         }
 
         return View::make('photogallery::albums.assign')

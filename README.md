@@ -68,7 +68,7 @@ Todos:
   * add crop functionality
   * add instagram/hipster/derp filters (maybe)
   * add watermark thingy
-- sort names
+- sort by id desc
 - better css
 - add facades
 - drag and drop upload
