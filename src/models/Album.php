@@ -10,4 +10,12 @@ class Album extends \Eloquent {
     public function photos(){
         return $this->belongsToMany('Ffy\Photogallery\Photo', 'ffy_album_photo')->withTimestamps();
     }
+
+    public function firstPhoto(){
+        return $this->photos()->first()->url;
+    }
+
+    public function randomPhoto(){
+        dd($this->photos()->get()->random()->url);
+    }
 }
