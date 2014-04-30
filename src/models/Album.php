@@ -12,10 +12,16 @@ class Album extends \Eloquent {
     }
 
     public function firstPhoto(){
-        return $this->photos()->first()->url;
+        if($this->photos()){
+            return $this->photos()->first()->url;
+        }
+        return '';
     }
 
     public function randomPhoto(){
-        dd($this->photos()->get()->random()->url);
+        if($this->photos()){
+            dd($this->photos()->get()->random()->url);
+        }
+        return '';
     }
 }
