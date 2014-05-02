@@ -20,7 +20,7 @@ class Album extends \Eloquent {
 
     public function randomPhoto(){
         if($this->photos()){
-            dd($this->photos()->get()->random()->url);
+            $this->photos()->get()->random()->url;
         }
         return '';
     }
